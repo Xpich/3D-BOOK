@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+<title>TEST</title>
+<link rel='stylesheet' href='styles.css'/>
+<script>
+const root = document.querySelector(':root');
+root.style.setProperty('--body-width',  document.documentElement.clientWidth  + 'px');
+root.style.setProperty('--body-height', document.documentElement.clientHeight + 'px');
+root.style.setProperty('--gold', (Math.sqrt(5)-1)/2);
+</script>
+</head>
+
+<body>
+<div class='container'>
+<div class='space'><div class='cosmos'></div></div>
+<div class='test'><span class='text'>50%</span></div>
+</div>
+</body>
+</html>
