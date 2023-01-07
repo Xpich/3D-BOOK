@@ -2,10 +2,7 @@
 
 :root { --ratio: 0; }
 
-*:not(html) {
-margin: 0; padding: 0;
--webkit-transform: translate3d(0, 0, 0);
-}
+* { margin: 0; padding: 0; }
 
 .room {
 position: relative;
@@ -105,6 +102,7 @@ animation-duration: 3s;
 animation-fill-mode: forwards;
 animation-play-state: paused;
 animation-timing-function: linear;
+transform-style: preserve-3d;
 transform: translateZ(1px);
 }
 .glass {
@@ -118,6 +116,7 @@ animation-duration: 3s;
 animation-fill-mode: forwards;
 animation-play-state: paused;
 animation-timing-function: linear;
+transform-style: preserve-3d;
 transform: translateZ(1px);
 }	
 @keyframes disappear { 100% { opacity: 0; } }
@@ -133,6 +132,7 @@ animation-duration: 4s;
 animation-fill-mode: forwards;
 animation-play-state: paused;
 animation-timing-function: linear;
+transform-style: preserve-3d;
 transform: translateZ(1px);
 }
 @keyframes appearance { 100% { opacity: 1; } }
@@ -141,6 +141,7 @@ transform: translateZ(1px);
 position: absolute;
 top: calc(var(--ratio)*147px); right: calc(var(--ratio)*(-32px));
 width: calc(var(--ratio)*300px); height: calc(var(--ratio)*238px);
+transform-style: preserve-3d;
 transform: translateZ(1px);
 }
 
@@ -151,6 +152,7 @@ width: calc(var(--ratio)*256px); height: calc(var(--ratio)*192px);
 background-color: #FFE;
 box-shadow: calc(var(--ratio)*4px) calc(var(--ratio)*4px) calc(var(--ratio)*4px) black;
 text-align: center;
+transform-style: preserve-3d;
 transform: rotateZ(-30deg) translateZ(1px);
 }
 
@@ -162,7 +164,7 @@ border: calc(var(--ratio)*1px) solid black;
 box-shadow: 0 0 calc(var(--ratio)*8px);
 transform-style: preserve-3d;
 transform-origin: left center 0;
-transform: translateZ(2px);
+transform: translateZ(20px);
 animation-duration: 1s;
 animation-fill-mode: both;
 animation-play-state: paused;
@@ -180,7 +182,7 @@ animation-timing-function: linear;
 @keyframes S5RY { 0% {z-index: 10; transform: rotateY(0) } 50% {z-index: 50; transform: rotateY(-90deg); } 100% {z-index: 50; transform: rotateY(-180deg); } }
 
 .wrapper { position: absolute; width: 100%; height: 100%; cursor: pointer; }
-#F1 { transform: translateZ(5px); } #B1 { transform: translateZ(-1px); background: red; opacity: 0.5; }
+#F1 { transform: translateZ(5px); } #B1 { transform: translateZ(-1px); background: #F0F; opacity: 0.5; }
 #F2 { transform: translateZ(4px); } #B2 { transform: translateZ(-2px); }
 #F3 { transform: translateZ(3px); } #B3 { transform: translateZ(-3px); }
 #F4 { transform: translateZ(2px); } #B4 { transform: translateZ(-4px); }
