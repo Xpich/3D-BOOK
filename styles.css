@@ -150,7 +150,7 @@ transform: translateZ(1px);
 }
 
 .paper {
-position: absolute;
+position: absolute; z-index: 0;
 top: calc(var(--ratio)*158px); left: calc(var(--ratio)*16px); 
 width: calc(var(--ratio)*256px); height: calc(var(--ratio)*192px);
 background-color: #FFE;
@@ -158,7 +158,7 @@ box-shadow: calc(var(--ratio)*4px) calc(var(--ratio)*4px) calc(var(--ratio)*4px)
 text-align: center;
 transform-style: preserve-3d;
 transform-origin: center center 0;
-transform: rotateZ(-30deg) translateZ(1px);
+transform: translateZ(5px) rotateZ(-30deg);
 }
 
 .sheet {
@@ -187,7 +187,7 @@ animation-timing-function: linear;
 @keyframes S5RY { 0% {z-index: 10; transform: rotateY(0) } 50% {z-index: 50; transform: rotateY(-90deg); } 100% {z-index: 50; transform: rotateY(-180deg); } }
 
 .wrapper { position: absolute; width: 100%; height: 100%; cursor: pointer; }
-#F1 { transform: translateZ(5px); } #B1 { transform: translateZ(-1px); background: #FFF; opacity: 0.5; }
+#F1 { transform: translateZ(5px); } #B1 { transform: translateZ(-1px); background: #F0F; opacity: 0.333; }
 #F2 { transform: translateZ(4px); } #B2 { transform: translateZ(-2px); }
 #F3 { transform: translateZ(3px); } #B3 { transform: translateZ(-3px); }
 #F4 { transform: translateZ(2px); } #B4 { transform: translateZ(-4px); }
@@ -250,7 +250,7 @@ background-color: #FFE;
 box-shadow: calc(var(--ratio)*4px) calc(var(--ratio)*4px) calc(var(--ratio)*4px) black;
 text-align: center;
 transform-origin: center center 0;
-transform: rotateZ(30deg) translateZ(1px);
+transform: translateZ(10px) rotateZ(30deg);
 animation-name: attention;
 animation-delay: 12s;
 animation-duration: 0.1s;
@@ -260,23 +260,23 @@ animation-iteration-count: 4;
 animation-timing-function: linear;
 }
 @keyframes attention {
-0%    {transform: rotateZ(30deg); }
-100%  {transform: rotateZ(25deg); }
+0%    {transform: translateZ(10px) rotateZ(30deg); }
+100%  {transform: translateZ(10px) rotateZ(25deg); }
 }
 a:hover { color: red; }
 
 .loupe {
-position: absolute;
+position: absolute; z-index: 100;
 bottom: calc(var(--ratio)*(-32px)); right: calc(var(--ratio)*32px);
 width: calc(var(--ratio)*256px); height: calc(var(--ratio)*256px);
 cursor: pointer;
 transform-style: preserve-3d;
 transform-origin: center center 0;
-transform: translateZ(30px);
+transform: scale(1.00) translate3d(0, 0, 30px);
 transition: transform 0.25s ease-out;
 }
 .loupe:hover {
-transform: translate(calc(var(--ratio)*(-48px)), calc(var(--ratio)*(-48px))) scale(1.25);
+transform: scale(1.25) translate3d(calc(var(--ratio)*(-48px)), calc(var(--ratio)*(-48px)), 30px);
 }
 
 p { font-family: "Marck Script"; line-height: 1.0; word-spacing: -0.25em; }
